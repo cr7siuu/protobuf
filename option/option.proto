@@ -1,0 +1,13 @@
+syntax = "proto3";
+option optimize_for = LITE_RUNTIME;
+
+enum PhoneType{
+    option allow_alias = true;
+    MP = 0;
+    TEL = 1;
+    LANDLINE = 1; // 若不加 option allow_alias = true; 这⼀⾏会编译报错 相当于对一个编号使用别名
+
+}
+message PeopleInfo{
+    string name = 1;
+}
